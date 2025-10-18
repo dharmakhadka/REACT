@@ -3,17 +3,18 @@ import { useState } from "react";
 const App = () => {
   const [input, setInput] = useState("");
   const [tasks, setTasks] = useState([]);
+
   return(
     <div>
       <h2>To Do App</h2>
-      <input value = {input} onChange={(e) => setInput(e.target.value)}></input>
+      <input value= {input} onChange={(e) => setInput(e.target.value)}></input>
       <button onClick={() => {
-        if(input.trim() === ""){
+        if(input.trim() ===""){
           return;
         }
-        setTasks([...tasks, input]);
+        setTasks([...tasks,input]);
         setInput("");
-        }}>Add Task</button>
+        }}>Add Tasks</button>
       <ul>
         {tasks.map((task,index) => (
           <li key={index}>{task}</li>
@@ -22,4 +23,5 @@ const App = () => {
     </div>
   );
 }
+
 export default App;
