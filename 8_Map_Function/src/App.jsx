@@ -1,14 +1,13 @@
+import Greeting from "./Greeting";
+
 const App = () => {
-  const products = ["rice","dal","spices"];
+  const friends = ["a","b","c","d","e","f","g","h","i"]
   return(
     <div>
-      <ul>
-        {products.map((product,index)=>(
-          <li key={index}>{product}</li>
-        ))}
-      </ul>
+      {friends.map((friend, index) => (
+        <Greeting key={index} name={friend}></Greeting>
+      ))}
     </div>
   );
 }
-
 export default App;
