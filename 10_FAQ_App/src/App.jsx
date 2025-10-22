@@ -1,29 +1,37 @@
+import { useState } from "react";
+
 const App = () => {
   const faqs = [
     {
-      question: "What is React ?",
+      question: "What is React?",
       answer: "It is a JS library to build the user interface.",
     },
     {
-      question: "What is JSX ?",
-      answer: "It is a JS extension used in the react.",
+      question: "What is JSX?",
+      answer: "It is a JS extension used in React.",
     },
     {
-      question: "What is Component ?",
-      answer: "It is a piece of a UI which can be reused in various parts or in user interface."
-    }
+      question: "What is a Component?",
+      answer: "It is a piece of UI which can be reused in various parts of the interface.",
+    },
   ];
 
-  
+  const [openIndex, setOpenIndex] = useState(null);
 
-  return(
+  const show = (index) => {
+    setOpenIndex(index === openIndex ? null : index);
+  };
+
+  return (
     <div>
-      {faqs.map((faq,index) => (
-        <li key={index}>{faq.question}</li>
+      {faqs.map((faq, index) => (
+        <li onClick={() => show(index)} key={index}>
+          {faq.question}
+          {index === openIndex && <p>{faq.answer}</p>}
+        </li>
       ))}
     </div>
   );
-
-}
+};
 
 export default App;
