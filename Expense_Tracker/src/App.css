@@ -1,0 +1,88 @@
+.expense-container {
+  color: #333;
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  flex: 1;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-btn {
+  padding: 8px 15px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #45a049;
+}
+
+.expense-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expense-item {
+  background: white;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background-color: #ef5350;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #e53935;
+}
+
+.total {
+  margin-top: 15px;
+  color: #333;
+  font-size: 18px;
+}
+
+.chart-container {
+  margin-top: 30px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
